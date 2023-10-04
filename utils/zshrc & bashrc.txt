@@ -1,0 +1,6 @@
+USER=lobartol
+export USER
+MAIL=lobartol@student.42firenze.it
+export MAIL
+alias CC="cc -Wall -Werror -Wextra"
+alias A="./a.out"
