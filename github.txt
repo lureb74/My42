@@ -1,2 +1,12 @@
-TOKEN:
-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
+User ID
+lureb74
+
+PW
+VitaNova74@#
+
+git clone https://github.com/lureb74/My42.git My42
+Username: YOUR_USERNAME
+Password: YOUR_PERSONAL_ACCESS_TOKEN
+
+TOKEN "IO da casa":
+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
