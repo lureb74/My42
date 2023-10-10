@@ -4,9 +4,9 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*us;
-	size_t	i;
+	size_t		i;
 
-	us = s;
+	us = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 		us[i++] = '\0';
