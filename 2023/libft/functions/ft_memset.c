@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 int	main(void)
 {
 	char	s[] = "qwertyuiop";
-	int		c = 120;
+	int	c = 120;
 	size_t	n = 6;
 
 	ft_memset(s, c, n);
