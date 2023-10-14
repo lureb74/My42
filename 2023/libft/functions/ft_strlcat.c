@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*
 int	main(void)
 {
-	char		dst[] = "questa stringa ";
+	char		dst[] = "Questa stringa ";
 	const char	src[] = "e' stata copiata per intero";
 	size_t		r;
 	size_t		size = 43;
@@ -54,7 +54,7 @@ int	main(void)
 /*
 int	main(void)
 {
-	char		dst[] = "questa stringa ";
+	char		dst[] = "Questa stringa ";
 	const char	src[] = "e' stata copiata per intero";
 	size_t		r;
 	size_t		size = 43;
