@@ -14,7 +14,7 @@ char	*ft_strchr(const char *s, int c)
 /*
 int	main(void)
 {
-	const char	s[] = "qwertyuiop";
+	const char	s[] = "qwertyuiopqwertyuiop";
 	int			c = 101;
 
 	printf("%s\n", strchr(s, c));
