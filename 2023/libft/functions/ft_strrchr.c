@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lobartol <lobartol@student.42firenze.it>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 18:24:08 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/07 18:24:13 by lobartol         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-//#include <libft.h>
+//#include "libft.h"
 //#include <stdio.h>
-#include <string.h>
+//#include <string.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -26,28 +14,24 @@ size_t	ft_strlen(const char *str)
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	l;
 
-	i = ft_strlen(s) - 1;
-	while (s[i] != c)
+	l = ft_strlen(s) - 1;
+	while (l > 0)
 	{
-		if (s[i] == 0)
-		{
-			return (NULL);
-		}
-		i--;
+		if (s[l] == c)
+			return ((char *)s + l);
+		l--;
 	}
-	return ((char*)s + i);
+	return (0);
 }
 /*
 int	main(void)
 {
 	const char	s[] = "qwertyuiopqwertyuiop";
-	int			c;
-	char		*r;
+	int			c = 101;
 
-	c = 'y';
-	r = ft_strrchr(s, c);
-	printf("%s\n", r);
+	printf("%s\n", strrchr(s, c));
+	printf("%s\n", ft_strrchr(s, c));
 	return (0);
 }*/
