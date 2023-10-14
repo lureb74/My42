@@ -1,17 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lobartol <lobartol@student.42firenze.it>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 09:48:41 by lobartol          #+#    #+#             */
-/*   Updated: 2023/09/28 09:48:44 by lobartol         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include<stdio.h>
-#include<string.h>
+//#include "libft.h"
+//#include <bsd/string.h>
+//#include <stdio.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -45,7 +34,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 	return (dst_c + s_len);
 }
-
+/*
 int	main(void)
 {
 	char		dst[] = "questa stringa ";
@@ -54,11 +43,28 @@ int	main(void)
 	size_t		size = 43;
 
 	r = ft_strlcat(dst, src, size);
-	printf("Value: %ld\n", r);
+	printf("FT:\nValue: %ld\n", r);
 	puts(dst);
 	if(r >= size)
 		puts("Stringa interrotta");
 	else
 		puts("Stringa completa");
 	return (0);
-}
+}*/
+/*
+int	main(void)
+{
+	char		dst[] = "questa stringa ";
+	const char	src[] = "e' stata copiata per intero";
+	size_t		r;
+	size_t		size = 43;
+
+	r = strlcat(dst, src, size);
+	printf("ORIGINAL:\nValue: %ld\n", r);
+	puts(dst);
+	if(r >= size)
+		puts("Stringa interrotta");
+	else
+		puts("Stringa completa");
+	return (0);
+}*/
