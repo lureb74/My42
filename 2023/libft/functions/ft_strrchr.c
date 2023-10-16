@@ -16,20 +16,17 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	l;
 
-	l = ft_strlen(s) - 1;
-	while (l > 0)
-	{
+	l = ft_strlen(s);
+	while (l-- > 0)
 		if (s[l] == c)
 			return ((char *)s + l);
-		l--;
-	}
 	return (0);
 }
 /*
 int	main(void)
 {
 	const char	s[] = "qwertyuiopqwertyuiop";
-	int			c = 101;
+	int			c = 'p';
 
 	printf("%s\n", strrchr(s, c));
 	printf("%s\n", ft_strrchr(s, c));
