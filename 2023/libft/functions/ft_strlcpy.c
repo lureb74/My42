@@ -1,6 +1,6 @@
 //#include "libft.h"
-//#include <bsd/string.h>
 //#include <stdio.h>
+//#include <bsd/string.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -14,23 +14,26 @@ size_t	ft_strlen(const char *str)
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t		l;
-	size_t		i;
+	size_t	i;
 
-	l = ft_strlen(src);
+	if (!dst || !src)
+		return (0);
 	i = 0;
-	while (src[i] && i < size - 1)
+	if (size != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (src[i] && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (l);
+	return (ft_strlen(src));
 }
 /*
 int	main(void)
 {
-	char		dst[] = "";
+	char		dst[43];
 	const char	src[] = "Questa stringa e' stata copiata per intero";
 	size_t		r;
 	size_t		size = 31;
@@ -47,7 +50,7 @@ int	main(void)
 /*
 int	main(void)
 {
-	char		dst[] = "";
+	char		dst[43];
 	const char	src[] = "Questa stringa e' stata copiata per intero";
 	size_t		r;
 	size_t		size = 31;
