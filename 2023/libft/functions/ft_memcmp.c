@@ -1,26 +1,32 @@
 //#include <stdio.h>
-#include <string.h>
+//#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*alts1;
-	unsigned char	*alts2;
+	size_t	i;
 
-	alts1 = (unsigned char *)s1;
-	alts2 = (unsigned char *)s2;
-	if (n == 0)
-		return (0);
-	while (*alts1 == *alts2 && *alts1 && *alts1 < n - 1)
+	i = 0;
+	while (i < n)
 	{
-		alts1++;
-		alts2++;
+		if (*(unsigned char*)(s1 + i) != *(unsigned char*)(s2 + i))
+			return (*(unsigned char*)(s1 + i) - *(unsigned char*)(s2 + i));
+		i++;
 	}
-	return (*alts1 - *alts2);
+	return (0);
 }
 /*
 int	main(void)
 {
-	printf("%d\n", ft_memcmp("Ciao!", "Ciao!", 5));
-	printf("%d\n", ft_memcmp("Ciao!", "Bello!", 0));
-	printf("%d\n", ft_memcmp("miao!", "Ciao!", -1));
+	char	s1[] = "Ciao!";
+	char	s2[] = "Ziao!";
+	size_t	n = 5;
+	int		ft;
+	int		or;
+
+	ft = ft_memcmp(s1, s2, n);
+	or = memcmp(s1, s2, n);
+	printf("FT:\n");
+	printf("%d\n", ft);
+	printf("ORIGINAL:\n");
+	printf("%d\n", or);
 }*/
