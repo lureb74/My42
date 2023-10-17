@@ -3,31 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobartol <lobartol@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: lobartol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 22:29:15 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/07 22:29:18 by lobartol         ###   ########.fr       */
+/*   Created: 2023/10/09 12:42:00 by lobartol          #+#    #+#             */
+/*   Updated: 2023/10/09 12:42:15 by lobartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <string.h>
+//#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (!n)
-		return (0);
-	while (s1[i] == s2[i] && *s1 && i < n - 1)
+	while (i < n)
+	{
+		if (*(s1 + i) != *(s2 + i))
+			return (*(s1 + i) - *(s2 + i));
 		i++;
-	return (*s1 - *s2);
+	}
+	return (0);
 }
 /*
 int	main(void)
 {
-	printf("%d\n", ft_strncmp("Ciao!", "Ciao!", 5));
-	printf("%d\n", ft_strncmp("Ciao!", "Ciao!*", 7));
-	printf("%d\n", ft_strncmp("miao!", "Ciao", 0));
+	char	s1[] = "Ciao!";
+	char	s2[] = "Ciaz!";
+	size_t	n = 6;
+	int		ft;
+	int		or;
+
+	ft = ft_strncmp(s1, s2, n);
+	or = strncmp(s1, s2, n);
+	printf("FT:\n");
+	printf("%d\n", ft);
+	printf("ORIGINAL:\n");
+	printf("%d\n", or);
 }*/
