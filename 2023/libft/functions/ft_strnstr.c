@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lobartol <lobartol@student.42firenze.it>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 21:27:44 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/07 21:27:47 by lobartol         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
+//#include <bsd/string.h>
 //#include <stdio.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -21,17 +9,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (!*little)
 		return ((char *)big);
-	while (big[i])
+	while (big[i] && i < len)
 	{
 		n = 0;
-		while (big[i + n] == little[n])
-		{
-			if (!little[n + 1] || n == len)
-			{
-				return ((char *)big + i);
-			}
+		while (big[i + n] && little[n] &&
+				i + n < len && big[i + n] == little[n])
 			n++;
-		}
+		if (!little[n])
+			return ((char *)big + i);
 		i++;
 	}
 	return (0);
@@ -39,12 +24,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int	main(void)
 {
-	char	big[] = "quando quel quadro quotera' qui quaglieremo quacquaracqua'";
-	char	little[] = "o quot";
-	char	*t;
-	size_t	len;
+	const char	big[] = "quando quel quadro quota qui quagliamo quacquaracqua'";
+	const char	little[] = "o qua";
+	char		*ft;
+	char		*or;
+	size_t		len = 42;
 
-	len = 3;
-	t = ft_strnstr(big, little, len);
-	printf ("Substring located:\n%s\n", t);
+	ft = ft_strnstr(big, little, len);
+	printf ("Substring located (FT):\n%s\n", ft);
+	or = strnstr(big, little, len);
+	printf ("Substring located (ORIGINAL):\n%s\n", or);
+	return (0);
 }*/
