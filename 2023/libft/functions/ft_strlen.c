@@ -1,17 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lobartol <lobartol@student.42firenze.it>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 11:33:22 by lobartol          #+#    #+#             */
-/*   Updated: 2023/09/19 11:33:24 by lobartol         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 //#include<libft.h>
-#include<string.h>
+//#include<string.h>
+//#include <stdio.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -22,3 +11,23 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+/*
+int	main(void)
+{
+	const char	str[] = "Questa stringa e' moooooooooooooolto lunga";
+	size_t		r;
+
+	r = ft_strlen(str);
+	printf("FT:\n%ld\n", r);
+	return (0);
+}*/
+/*
+int	main(void)
+{
+	const char	str[] = "Questa stringa e' moooooooooooooolto lunga";
+	size_t		r;
+
+	r = strlen(str);
+	printf("ORIGINAL:\n%ld\n", r);
+	return (0);
+}*/
