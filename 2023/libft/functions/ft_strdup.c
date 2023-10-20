@@ -11,10 +11,22 @@
 /* ************************************************************************** */
 
 //#include "libft.h"
-//#include <stdlib.h>
-//#include <string.h>
 //#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+/*
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*d;
+	unsigned char	*s;
 
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (n--)
+		*d++ = *s++;
+	return (dest);
+}
+*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	while (n--)
@@ -31,7 +43,21 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+/*
+char	*ft_strdup(const char *s)
+{
+	size_t	size;
+	char	*dest;
 
+	size = ft_strlen(s);
+	dest = (char *)malloc(size * sizeof(char) + 1);
+	if (dest == NULL)
+		return (0);
+	ft_memcpy(dest, s, size);
+	dest[size] = '\0';
+	return (dest);
+}
+*/
 char	*ft_strdup(const char *s)
 {
 	char *sdup;
