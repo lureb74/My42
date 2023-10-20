@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 //#include <stdio.h>
-//#include <string.h>
+//#include <strings.h>
 
+/*
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*us;
@@ -21,14 +22,21 @@ void	ft_bzero(void *s, size_t n)
 	us = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-		us[i++] = '\0';
+		us[i++] = 'x';
+  }
+*/
+void	ft_bzero(void *s, size_t n)
+{
+	while (n--)
+		*(unsigned char *)s++ = 'x';
 }
 /*
 int	main(void)
 {
 	char	s[] = "qwertyuiop";
-	size_t	n = 1;
+	size_t	n = 0;
 
+	printf("%s\n", s);
 	ft_bzero(s, n);
 	printf("%s\n", s);
 	return (0);
@@ -39,6 +47,7 @@ int	main(void)
 	char	s[] = "qwertyuiop";
 	size_t	n = 1;
 
+	printf("%s\n", s);
 	bzero(s, n);
 	printf("%s\n", s);
 	return (0);
