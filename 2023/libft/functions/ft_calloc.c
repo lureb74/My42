@@ -17,7 +17,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
-		*(unsigned char *)s++ = 'x';
+		*(unsigned char *)s++ = '\0';
 }
 
 void	*ft_calloc(size_t nmemb, size_t size)
