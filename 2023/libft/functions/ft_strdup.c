@@ -58,11 +58,12 @@ char	*ft_strdup(const char *s)
 	return (dest);
 }
 */
+
 char	*ft_strdup(const char *s)
 {
-	char *sdup;
+	char	*sdup;
 
-	if (!(sdup = (char *)malloc(ft_strlen(s) + 1)))
+	if (!(sdup == (char *)malloc(ft_strlen(s) + 1)))
 		return (0);
 	ft_memcpy(sdup, s, ft_strlen(s) + 1);
 	return (sdup);
