@@ -33,6 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 */
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (!dest && !src)
@@ -49,7 +50,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*(unsigned char *)dest++ = *(unsigned char *)src++;
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	char		dest[15] = "dindondan";
@@ -63,4 +64,4 @@ int	main(void)
 	memmove(dst, sr, n);
 	printf("ORIGINAL:\n%s\n", dst);
 	return (0);
-}
+}*/
