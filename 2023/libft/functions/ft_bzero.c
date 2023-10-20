@@ -22,13 +22,13 @@ void	ft_bzero(void *s, size_t n)
 	us = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-		us[i++] = 'x';
+		us[i++] = '\0';
   }
 */
 void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
-		*(unsigned char *)s++ = 'x';
+		*(unsigned char *)s++ = '\0';
 }
 /*
 int	main(void)
