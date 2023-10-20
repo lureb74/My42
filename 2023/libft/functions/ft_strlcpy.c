@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lobartol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/09 11:27:43 by lobartol          #+#    #+#             */
+/*   Updated: 2023/10/09 11:27:47 by lobartol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //#include "libft.h"
-//#include <bsd/string.h>
 //#include <stdio.h>
+//#include <bsd/string.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -31,32 +43,24 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 /*
 int	main(void)
 {
-	char		dst[43];
+	char		dstft[43];
+	char		dstor[43];
 	const char	src[] = "Questa stringa e' stata copiata per intero";
-	size_t		r;
 	size_t		size = 31;
+	size_t		rft;
+	size_t		ror;
 
-	r = ft_strlcpy(dst, src, size);
-	printf("FT:\nValue: %ld\n", r);
-	puts(dst);
-	if(r >= size)
+	rft = ft_strlcpy(dstft, src, size);
+	printf("FT:\nValue: %ld\n", rft);
+	puts(dstft);
+	if(rft >= size)
 		puts("Stringa interrotta");
 	else
 		puts("Stringa completa");
-	return (0);
-}*/
-/*
-int	main(void)
-{
-	char		dst[43];
-	const char	src[] = "Questa stringa e' stata copiata per intero";
-	size_t		r;
-	size_t		size = 31;
-
-	r = strlcpy(dst, src, size);
-	printf("ORIGINAL:\nValue: %ld\n", r);
-	puts(dst);
-	if(r >= size)
+	ror = strlcpy(dstor, src, size);
+	printf("FT:\nValue: %ld\n", ror);
+	puts(dstor);
+	if(ror >= size)
 		puts("Stringa interrotta");
 	else
 		puts("Stringa completa");
