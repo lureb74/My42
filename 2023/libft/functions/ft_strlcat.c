@@ -47,32 +47,24 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*
 int	main(void)
 {
-	char		dst[43] = "Questa stringa ";
+	char		dstft[43] = "Questa stringa ";
+	char		dstor[43] = "Questa stringa ";
 	const char	src[] = "e' stata copiata per intero";
-	size_t		r;
 	size_t		size = 43;
+	size_t		rft;
+	size_t		ror;
 
-	r = ft_strlcat(dst, src, size);
-	printf("FT:\nValue: %ld\n", r);
-	puts(dst);
-	if(r >= size)
+	rft = ft_strlcat(dstft, src, size);
+	printf("FT:\nValue: %ld\n", rft);
+	puts(dstft);
+	if(rft >= size)
 		puts("Stringa interrotta");
 	else
 		puts("Stringa completa");
-	return (0);
-}*/
-/*
-int	main(void)
-{
-	char		dst[43] = "Questa stringa ";
-	const char	src[] = "e' stata copiata per intero";
-	size_t		r;
-	size_t		size = 43;
-
-	r = strlcat(dst, src, size);
-	printf("ORIGINAL:\nValue: %ld\n", r);
-	puts(dst);
-	if(r >= size)
+	ror = strlcat(dstor, src, size);
+	printf("FT:\nValue: %ld\n", ror);
+	puts(dstor);
+	if(ror >= size)
 		puts("Stringa interrotta");
 	else
 		puts("Stringa completa");
