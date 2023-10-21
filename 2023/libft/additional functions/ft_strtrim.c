@@ -51,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[stop] && setcheck(s1[stop], set) == 1)
 		stop--;
 	r = (char *)malloc((stop - start) + 2);
-	if (r == NULL)
+	if (!r)
 		return (NULL);
 	i = 0;
 	while (start <= stop)
