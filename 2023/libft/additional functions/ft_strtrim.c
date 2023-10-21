@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include "libft.h"
 //#include <stdio.h>
-//#include <stdlib.h>
+#include <stdlib.h>
 
 static int	setcheck(char c, const char *set)
 {
