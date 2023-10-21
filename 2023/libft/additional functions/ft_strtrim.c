@@ -16,14 +16,11 @@
 
 static int	setcheck(char c, const char *set)
 {
-	int	i;
-
-	i = 0;
-	while (set[i])
+	while (*set)
 	{
-		if (set[i] == c)
+		if (*set == c)
 			return (1);
-		i++;
+		set++;
 	}
 	return (0);
 }
