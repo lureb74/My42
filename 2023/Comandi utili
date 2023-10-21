@@ -1,0 +1,2 @@
+CC xxxxx.c && valgrind ./a.out
+Eseguendo, fa un controllo se ci sono leaks nella memoria 
