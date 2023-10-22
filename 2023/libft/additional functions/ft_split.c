@@ -29,7 +29,7 @@ static int	lines(char const *s, char c)
 		{
 			line++;
 			i++;
-			while (s[i] != c)
+			while (s[i] && s[i] != c)
 				i++;
 		}
 	}
@@ -51,7 +51,7 @@ static int	columns(char const *s, char c, int ln)
 		{
 			cc++;
 			i++;
-			while (s[i] != c)
+			while (s[i] && s[i] != c)
 			{
 				cc++;
 				i++;
