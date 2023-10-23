@@ -26,29 +26,33 @@ size_t	ft_strlen(const char *str)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
+	char	*r;
 	int		l1;
 	int		l2;
 
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
-	new = (char *)malloc(l1 + l2);
-	if (!new)
+	r = (char *)malloc((l1 + l2 + 1) * sizeof(char));
+	if (!r)
 		return (NULL);
-	new = (char *)s1;
+	l1 = -1;
+	while (s1[++l1])
+		r[l1] = s1[l1];
 	while (*s2)
-		new[l1++] = *s2++;
-	new[l1] = '\0';
-	return (new);
+		r[l1++] = *s2++;
+	r[l1] = '\0';
+	printf("%d\n", l1);
+	return (r);
 }
 /*
-int	main()
+int	main(void)
 {
-	const char		s1[] = "bimbo";
-	const char		s2[] = "minchia!";
-	char			*r;
+	const char	s1[] = "bimbo";
+	const char	s2[] = "minchia!";
+	char		*r;
 
 	r = ft_strjoin(s1, s2);
 	printf("New string:\n%s\n", r);
+	free(r);
 	return (0);
 }*/
