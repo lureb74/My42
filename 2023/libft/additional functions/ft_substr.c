@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	int		i;
 
-	sub = (char *)malloc(len);
+	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (!sub)
 		return (NULL);
 	i = 0;
@@ -39,5 +39,6 @@ int	main()
 
 	r = ft_substr(s, start, len);
 	printf("Substring:\n%s\n", r);
+	free(r);
 	return (0);
 }*/
