@@ -90,45 +90,45 @@ static char	*charcopy(char const *s, char c, int ln, int cl)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**mat;
+	char	**r;
 	int		line;
 	int		cl;
 	int		ln;
 
 	ln = -1;
 	line = lines(s, c);
-	mat = (char **)malloc((line + 1) * sizeof(char *));
-	if (!mat)
+	r = (char **)malloc((line + 1) * sizeof(char *));
+	if (!r)
 		return (NULL);
 	while (++ln < line)
 	{
 		cl = columns(s, c, ln);
-		mat[ln] = charcopy(s, c, ln, cl);
-		if (!mat[ln])
+		r[ln] = charcopy(s, c, ln, cl);
+		if (!r[ln])
 		{
-			while (mat[--ln])
-				free(mat[ln]);
-			free(mat);
+			while (r[--ln])
+				free(r[ln]);
+			free(r);
 			return (NULL);
 		}
 	}
-	return (mat);
+	return (r);
 }
 /*
 int	main(void)
 {
-	char **what;
-	const char	s[] = "      all we need is love    ";
+	char **r;
+	const char	s[] = " all we need is love ";
 	char		c = ' ';
 	int	i = 0;
 
-	what = ft_split(s, c);
-	while (what[i])
+	r = ft_split(s, c);
+	while (r[i])
 	{
-		printf("%s\n", what[i]);
-		free(what[i]);
+		printf("%s\n", r[i]);
+		free(r[i]);
 		i++;
 	}
-	free(what);
+	free(r);
 	return (0);
 }*/
