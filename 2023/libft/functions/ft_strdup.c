@@ -63,9 +63,11 @@ char	*ft_strdup(const char *s)
 {
 	char	*sdup;
 
-	if (!(sdup == (char *)malloc(ft_strlen(s) + 1)))
-		return (0);
-	ft_memcpy(sdup, s, ft_strlen(s) + 1);
+	sdup = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!sdup)
+		return (NULL);
+	ft_memcpy(sdup, s, ft_strlen(s));
+	sdup[ft_strlen(s)] = '\0';
 	return (sdup);
 }
 /*
@@ -79,5 +81,7 @@ int	main(void)
 	printf("ORIGINAL:\n%s\n", ordup);
 	ftdup = ft_strdup(s);
 	printf("FT:\n%s\n", ftdup);
+	free(ordup);
+	free(ftdup);
 	return (0);
 }*/
