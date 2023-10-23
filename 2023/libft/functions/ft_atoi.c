@@ -59,4 +59,5 @@ int	main(void)
 	printf("FT:\n%d\n", ift);
 	ior = atoi(str);
 	printf("ORIGINAL:\n%d\n", ior);
+ 	return (0);
 }*/
