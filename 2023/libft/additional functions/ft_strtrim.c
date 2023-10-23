@@ -48,16 +48,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (s1[stop] && setcheck(s1[stop], set) == 1)
 		stop--;
-	r = (char *)malloc((stop - start) + 2);
+	r = (char *)malloc(((stop - start) + 2) * sizeof(char));
 	if (!r)
 		return (NULL);
 	i = 0;
 	while (start <= stop)
 		r[i++] = s1[start++];
+	r[i] = '\0';
 	return (r);
 }
 /*
-int	main()
+int	main(void)
 {
 	const char	s1[] = "x zcbuimxc vzmz xxz";
 	const char	set[] = "zx ";
@@ -66,5 +67,6 @@ int	main()
 	printf("Original string:\n%s\n", s1);
 	r = ft_strtrim(s1, set);
 	printf("Trimmed string:\n%s\n", r);
+	free(r);
 	return (0);
 }*/
