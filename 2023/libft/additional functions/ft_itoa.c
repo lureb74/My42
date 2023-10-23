@@ -1,28 +1,55 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
-//char *ft_itoa(int n)
-void    ft_itoa(int n)
+static int	count(int n)
 {
-    int     c;
-    int     ncopy;
-//  char    *r;
+	int	c;
 
-    c = 0;
-    ncopy = n;
-    while (ncopy && ++c < 10)
-        ncopy /= 10;
-//  printf("%d\n", c);
-         
+	c = 0;
+	if (n == 0)
+		return (1);
+	while (n)
+	{
+		n /= 10;
+		c++;
+	}
+	return (c);
+}
+
+char	*ft_itoa(int n)
+{
+	int		ncopy;
+	int		ncount;
+	char	*r;
+
+	ncount = count(n);
+//	while (ncount && ++c < 10)
+//		ncount /= 10;
+	printf("%d\n", ncount);
+	if (n < 0)
+		ncount++;
+	r = (char *)malloc((ncount + 1) * sizeof(char));
+	if (!r)
+		return (NULL);
+	ncopy = n;
+//	r[ncount] = '\0';
+	while (--ncount >= 0)
+	{
+		r[ncount] = ncopy % 10 + 48;
+		ncopy /= 10;
+	}
+	if (n < 0)
+		r[ncount] = '-';
+	r[count(n)] = '\0';
+	return (r);
 }
 
 int main(void)
 {
-    int      i = -2147483648;
-//    char    *r;
+	int		i = 2147483647;
+	char    *r;
 
-    ft_itoa(i);
-//    printf("%s\n", r);
-    return (0);
+	r = ft_itoa(i);
+	printf("%s\n", r);
+	return (0);
 }
