@@ -39,7 +39,6 @@ char	*ft_itoa(int n)
 	r = (char *)malloc((len + 1) * sizeof(char));
 	if (!r)
 		return (NULL);
-	r[len] = '\0';
 	if (ncopy < 0)
 	{
 		r[0] = '-';
@@ -49,9 +48,10 @@ char	*ft_itoa(int n)
 		r[0] = '0';
 	while (ncopy != 0)
 	{
-		r[--len] = (ncopy % 10) + 48;
-		ncopy = ncopy / 10;
+		r[--len] = ncopy % 10 + 48;
+		ncopy /= 10;
 	}
+	r[count(n)] = '\0';
 	return (r);
 }
 /*
