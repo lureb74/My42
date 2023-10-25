@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobartol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 19:31:02 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/24 19:31:06 by lobartol         ###   ########.fr       */
+/*   Created: 2023/10/25 18:20:03 by lobartol          #+#    #+#             */
+/*   Updated: 2023/10/25 18:20:22 by lobartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
 
 static int	count(int n)
 {
