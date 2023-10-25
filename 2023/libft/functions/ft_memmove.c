@@ -10,29 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-/*
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			i;
-
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	i = 0;
-	if (!d && !s)
-		return (NULL);
-	if (s < d)
-		while (++i <= n)
-			d[n - i] = s[n - i];
-	else
-		while (n--)
-			*d++ = *s++;
-	return (dest);
-}
-*/
+//#include <stdio.h>
+//#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -64,4 +44,24 @@ int	main(void)
 	memmove(dst, sr, n);
 	printf("ORIGINAL:\n%s\n", dst);
 	return (0);
+}*/
+/*
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
+
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	i = 0;
+	if (!d && !s)
+		return (NULL);
+	if (s < d)
+		while (++i <= n)
+			d[n - i] = s[n - i];
+	else
+		while (n--)
+			*d++ = *s++;
+	return (dest);
 }*/
