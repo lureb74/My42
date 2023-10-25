@@ -12,19 +12,8 @@
 
 //#include <stdio.h>
 //#include <string.h>
-/*
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*us;
-	size_t			i;
+#include "libft.h"
 
-	us = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-		us[i++] = (unsigned char)c;
-	return (s);
-}
-*/
 void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n--)
@@ -44,4 +33,16 @@ int	main(void)
 	memset(sor, c, n);
 	printf("ORIGINAL:\n%s\n", sor);
 	return (0);
+}*/
+/*
+void	*ft_memset(void *s, int c, size_t n)
+{
+	unsigned char	*us;
+	size_t			i;
+
+	us = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+		us[i++] = (unsigned char)c;
+	return (s);
 }*/
