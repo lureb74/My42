@@ -10,18 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdlib.h>
 //#include <stdio.h>
+#include "libft.h"
 
-/*
-ASCII values "syntax in strings" and names for ISSPACE:
-9	"\t" horizontal tab
-10	"\n" line feed (new line)
-11	"\v" vertical tab
-12	"\f" form feed
-13	"\r" carriage return
-32	" "  space
-*/
 int	ft_atoi(const char *str)
 {
 	size_t	i;
@@ -49,6 +40,14 @@ int	ft_atoi(const char *str)
 	return (c * s);
 }
 /*
+//ASCII values "syntax in strings" and names for ISSPACE:
+//9	"\t" horizontal tab
+//10	"\n" line feed (new line)
+//11	"\v" vertical tab
+//12	"\f" form feed
+//13	"\r" carriage return
+//32	" "  space
+
 int	main(void)
 {
 	const char	str[] = "	\v\n\f\t\r -00021x4362";
@@ -59,5 +58,4 @@ int	main(void)
 	printf("FT:\n%d\n", ift);
 	ior = atoi(str);
 	printf("ORIGINAL:\n%d\n", ior);
- 	return (0);
 }*/
