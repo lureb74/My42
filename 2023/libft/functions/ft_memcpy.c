@@ -12,20 +12,8 @@
 
 //#include <stdio.h>
 //#include <string.h>
-/*
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char	*d;
-	unsigned char	*s;
+#include "libft.h"
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n--)
-		*d++ = *s++;
-	*d = '\0';
-	return (dest);
-}
-*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	while (n--)
@@ -47,4 +35,17 @@ int	main(void)
 	memcpy(dst, sr, n);
 	printf("ORIGINAL:\n%s\n", dst);
 	return (0);
+}*/
+/*
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*d;
+	unsigned char	*s;
+
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (n--)
+		*d++ = *s++;
+	*d = '\0';
+	return (dest);
 }*/
