@@ -10,19 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
 //#include <stdio.h>
 //#include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
