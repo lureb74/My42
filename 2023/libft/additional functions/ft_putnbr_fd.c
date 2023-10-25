@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 
 static int	count(int n)
 {
@@ -25,13 +25,6 @@ static int	count(int n)
 		c++;
 	}
 	return (c);
-}
-
-void	ft_putstr_fd(char *s, int fd)
-{
-	if (!s || !fd)
-		return ;
-	write(fd, s, ft_strlen(s));
 }
 
 void	ft_putnbr_fd(int n, int fd)
