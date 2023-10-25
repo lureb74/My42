@@ -10,54 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
 //#include <stdio.h>
 //#include <string.h>
-//#include <stdlib.h>
-/*
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char	*d;
-	unsigned char	*s;
-
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n--)
-		*d++ = *s++;
-	return (dest);
-}
-*/
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	while (n--)
-		*(unsigned char *)dest++ = *(unsigned char *)src++;
-	return (dest);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-/*
-char	*ft_strdup(const char *s)
-{
-	size_t	size;
-	char	*dest;
-
-	size = ft_strlen(s);
-	dest = (char *)malloc(size * sizeof(char) + 1);
-	if (dest == NULL)
-		return (0);
-	ft_memcpy(dest, s, size);
-	dest[size] = '\0';
-	return (dest);
-}
-*/
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -81,7 +36,19 @@ int	main(void)
 	printf("ORIGINAL:\n%s\n", ordup);
 	ftdup = ft_strdup(s);
 	printf("FT:\n%s\n", ftdup);
-	free(ordup);
-	free(ftdup);
 	return (0);
+}*/
+/*
+char	*ft_strdup(const char *s)
+{
+	size_t	size;
+	char	*dest;
+
+	size = ft_strlen(s);
+	dest = (char *)malloc(size * sizeof(char) + 1);
+	if (dest == NULL)
+		return (0);
+	ft_memcpy(dest, s, size);
+	dest[size] = '\0';
+	return (dest);
 }*/
