@@ -12,19 +12,8 @@
 
 //#include <stdio.h>
 //#include <strings.h>
+#include "libft.h"
 
-/*
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned char	*us;
-	size_t			i;
-
-	us = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-		us[i++] = '\0';
-  }
-*/
 void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
@@ -51,4 +40,15 @@ int	main(void)
 	bzero(s, n);
 	printf("%s\n", s);
 	return (0);
+}*/
+/*
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*us;
+	size_t			i;
+
+	us = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+		us[i++] = '\0';
 }*/
