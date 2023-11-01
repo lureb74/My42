@@ -1,5 +1,0 @@
-CC xxxxx.c && valgrind ./a.out
-Eseguendo, fa un controllo se ci sono leaks nella memoria 
-
-
-AGGIORNATE TUTTE LE FUNZIONI IN CARTELLA "ADDITIONAL FUNCTIONS" + CALLOC E STRDUP
