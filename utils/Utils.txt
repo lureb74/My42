@@ -5,7 +5,8 @@ MAIL=lobartol@student.42firenze.it
 export MAIL
 
 
-MACROS
+MACRO (alias ...)
+da inserire nella cartella Home in un file .zshrc o .bashrc (modificando ev. file esistente
 alias CC="cc -Wall -Werror -Wextra"
 alias A="./a.out"
 
