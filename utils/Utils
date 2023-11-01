@@ -1,6 +1,15 @@
+42HEADER
 USER=lobartol
 export USER
 MAIL=lobartol@student.42firenze.it
 export MAIL
+
+
+MACROS
 alias CC="cc -Wall -Werror -Wextra"
 alias A="./a.out"
+
+
+VALGRIND
+CC xxxxx.c && valgrind ./a.out
+Eseguendo, fa un controllo se ci sono leaks nella memoria 
