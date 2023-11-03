@@ -19,19 +19,19 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	while ((s1 || s2) && i < n)
 	{
-		if (*(s1 + i) != *(s2 + i))
-			return (*(s1 + i) - *(s2 + i));
-		i++;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		++i;
 	}
 	return (0);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "Ciao!";
-	char	s2[] = "Ciaz!";
+	char	s1[] = "test\200";
+	char	s2[] = "test\0";
 	size_t	n = 6;
 	int		ft;
 	int		or;
