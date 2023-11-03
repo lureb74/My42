@@ -1,7 +1,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: lobartol <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -9,6 +9,8 @@
 #    Updated: 2023/11/01 16:44:50 by lobartol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME		= libft.a
 
 SRCS		= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 			  ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c \
@@ -22,11 +24,11 @@ SRCS		= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 B_SRCS		= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 			  ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
-OBJS		= $(SRCS:.c=.o)
+OBJS		= ${SRCS:.c=.o}
 
-B_OBJS		= $(B_SRCS:.c=.o)
+B_OBJS		= ${B_SRCS:.c=.o}
 
-NAME		= libft.a
+HEADER = libft.h
 
 CC			= gcc
 RM			= rm -f
@@ -35,27 +37,24 @@ RN			= ranlib
 
 CFLAGS		= -Wall -Wextra -Werror
 
-.c.o:		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+all:		${NAME}
 
-all:		$(NAME)
+${NAME}:	${OBJS}
+			${AR} ${NAME} ${OBJS}
+			${RN} ${NAME}
 
-$(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
-			$(RN) $(NAME)
+bonus:		${OBJS} ${B_OBJS}
+			${AR} ${NAME} ${OBJS} ${B_OBJS}
+			${RN} ${NAME}
 
-bonus:		$(OBJS) $(B_OBJS)
-			$(AR) $(NAME) $(OBJS) $(B_OBJS)
-			$(RN) $(NAME)
-
-so:
-			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(B_SRCS)
-			gcc -nostartfiles -shared -o $(NAME).so $(OBJS) $(B_OBJS)
+%.o: %.c ${HEADER}
+			${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-			$(RM) $(OBJS) $(B_OBJS)
+			${RM} ${OBJS} ${B_OBJS}
 
 fclean:		clean
-			$(RM) $(NAME).a $(NAME).so
+			${RM} ${NAME}
 
 re:			fclean all
 
