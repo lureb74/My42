@@ -16,24 +16,34 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	int		i;
+	long	i;
 
-	sub = (char *)malloc((len + 1) * sizeof(char));
+	if (start > ft_strlen(s))
+	{
+		sub = (char *)malloc(sizeof(char) * 1);
+		if (!sub)
+			return (NULL);
+		*sub = '\0';
+		return (sub);
+	}
+	if ((ft_strlen(s) - start) <= len)
+		sub = (char *)malloc(sizeof(char) * ((ft_strlen(s) - start) + 1));
+	else
+		sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
-	i = 0;
-	start -= 1;
-	while (s && len--)
-		sub[i++] = s[start++];
+	i = -1;
+	while (s[++i] && (size_t)i < len)
+		sub[i] = s[i + start];
 	sub[i] = '\0';
 	return (sub);
 }
 /*
 int	main()
 {
-	const char		s[] = "bimbominchia!";
-	unsigned int	start = 6;
-	size_t			len = 7;
+	const char		s[] = "hola";
+	unsigned int	start = 0;
+	size_t			len = 18446;
 	char			*r;
 
 	r = ft_substr(s, start, len);
