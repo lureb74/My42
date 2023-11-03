@@ -19,21 +19,34 @@ char	*ft_strrchr(const char *s, int c)
 	int	l;
 
 	l = ft_strlen(s);
-	while (l > 0)
-	{
-		if (s[l] == c)
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[l]);
+	while (--l >= 0)
+		if (s[l] == (unsigned char)c)
 			return ((char *)s + l);
-		l--;
-	}
 	return (0);
 }
 /*
 int	main(void)
 {
-	const char	s[] = "qwertyuiopqwertyuiop";
-	int			c = 'q';
+	const char	s[] = "qwertyuiopq";
+	int			c = '\0';
 
-	printf("%s\n", strrchr(s, c));
-	printf("%s\n", ft_strrchr(s, c));
+	printf("%p\n", strrchr(s, c));
+	printf("%p\n", ft_strrchr(s, c));
+	return (0);
+}*/
+/*
+char	*ft_strrchr(const char *s, int c)
+{
+	int	l;
+
+	l = ft_strlen(s);
+	while (l > 0)
+	{
+		if (s[l] == (unsigned char)c)
+			return ((char *)s + l);
+		l--;
+	}
 	return (0);
 }*/
