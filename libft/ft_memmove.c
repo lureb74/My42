@@ -16,18 +16,21 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!dest && !src)
-		return (0);
-	if (src < dest)
-	{
-		src += n;
-		dest += n;
-		while (n--)
-			*(unsigned char *)--dest = *(unsigned char *)--src;
-	}
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
+
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	i = 0;
+	if (!d && !s)
+		return (NULL);
+	if (s < d)
+		while (++i <= n)
+			d[n - i] = s[n - i];
 	else
 		while (n--)
-			*(unsigned char *)dest++ = *(unsigned char *)src++;
+			*d++ = *s++;
 	return (dest);
 }
 /*
@@ -48,20 +51,17 @@ int	main(void)
 /*
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			i;
-
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	i = 0;
-	if (!d && !s)
-		return (NULL);
-	if (s < d)
-		while (++i <= n)
-			d[n - i] = s[n - i];
+	if (!dest && !src)
+		return (0);
+	if (src < dest)
+	{
+		src += n;
+		dest += n;
+		while (n--)
+			*(unsigned char *)--dest = *(unsigned char *)--src;
+	}
 	else
 		while (n--)
-			*d++ = *s++;
+			*(unsigned char *)dest++ = *(unsigned char *)src++;
 	return (dest);
 }*/
