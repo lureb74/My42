@@ -14,3 +14,8 @@ alias A="./a.out"
 VALGRIND
 CC xxxxx.c && valgrind ./a.out
 Eseguendo, fa un controllo se ci sono leaks nella memoria 
+
+AGGIORNATI 04-11-2023:
+strchr
+strrchr
+strncmp
