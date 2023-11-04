@@ -6,7 +6,7 @@
 /*   By: lobartol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:50:22 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/27 18:50:25 by lobartol         ###   ########.fr       */
+/*   Updated: 2023/11/05 00:51:48 by lobartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (lst)
+	t_list	*tmp;
+
+	tmp = *lst;
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		if (!*lst)
-			*lst = new;
-		else
-		{
-			while ((*lst)->next)
-				*lst = (*lst)->next;
-			*lst = new;
-		}
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		tmp->next = new;
 	}
 }
