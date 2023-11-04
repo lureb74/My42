@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+vim/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: lobartol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:45:08 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/11 18:45:09 by lobartol         ###   ########.fr       */
+/*   Updated: 2023/11/05 00:31:53 by lobartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (!c && n)
-	{
-		*(unsigned char *)s = '\0';
-		return ((unsigned char *)s);
-	}
-	while (*(unsigned char *)s && n)
-	{
-		if (*(unsigned char *)s == (unsigned char)c)
-			return ((unsigned char *)s);
-		(unsigned char *)s++;
-		n--;
-	}
+	unsigned char	*scopy;
+	size_t			i;
+
+	scopy = (unsigned char *)s;
+	i = -1;
+	while (++i < n)
+		if (scopy[i] == (unsigned char)c)
+			return (&scopy[i]);
 	return (0);
 }
 /*
@@ -43,18 +39,5 @@ int	main(void)
 	printf("FT:\nLa stringa dopo '%c' è: %s\n", c, rft);
 	ror = memchr(s, c, n);
 	printf("ORIGINAL:\nLa stringa dopo '%c' è: %s\n", c, ror);
-	return (0);
-}*/
-/*
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*alts;
-	size_t			i;
-
-	alts = (unsigned char *)s;
-	i = 0;
-	while (i++ <= n)
-		if (alts[i] == (unsigned char)c)
-			return (&alts[i]);
 	return (0);
 }*/
