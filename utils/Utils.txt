@@ -19,3 +19,4 @@ AGGIORNATI 04-11-2023:
 strchr
 strrchr
 strncmp
+memchr
