@@ -21,3 +21,4 @@ strrchr
 strncmp
 memchr
 lstadd_back
+memcpy
