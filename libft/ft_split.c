@@ -6,7 +6,7 @@
 /*   By: lobartol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:58:02 by lobartol          #+#    #+#             */
-/*   Updated: 2023/10/21 15:58:05 by lobartol         ###   ########.fr       */
+/*   Updated: 2023/11/05 18:56:58 by lobartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static char	*charcopy(char const *s, char c, int ln, int cl)
 	char	*cc;
 
 	i = 0;
-	cc = (char *)malloc((cl + 1) * sizeof(char));
+	cc = (char *)ft_calloc((cl + 1), sizeof(char));
 	if (!cc)
 		return (NULL);
 	while (s[i] && ln >= 0)
@@ -96,7 +96,7 @@ char	**ft_split(char const *s, char c)
 
 	ln = -1;
 	line = lines(s, c);
-	r = (char **)malloc((line + 1) * sizeof(char *));
+	r = (char **)ft_calloc((line + 1), sizeof(char *));
 	if (!r)
 		return (NULL);
 	while (++ln < line)
