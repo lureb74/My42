@@ -47,5 +47,5 @@ int	main(void)
  	r = ft_strmapi(str, my_toupper);
  	printf("Risultato: %s\n", r);
  	free (r);
- 	return 0;
+ 	return (0);
 }*/
