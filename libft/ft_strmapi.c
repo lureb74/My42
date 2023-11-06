@@ -40,7 +40,7 @@ char my_toupper(unsigned int i, char c)
 
 int	main(void)
 {
- 	char str[13] = "Maiuscolami!";
+ 	char str[13] = "maiuscolami!";
  	printf("Stringa di partenza: %s\n", str);
  	char *r = ft_strmapi(str, my_toupper);
  	printf("Risultato: %s\n", r);
