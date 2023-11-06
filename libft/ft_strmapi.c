@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -22,12 +23,27 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	r = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!r)
 		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		r[i] = (*f)(i, s[i]);
-		i++;
-	}
+	i = -1;
+	while (s[++i])
+		r[i] = f(i, s[i]);
 	r[i] = '\0';
 	return (r);
 }
+/*
+char my_toupper(unsigned int i, char c)
+{
+	printf("My inner function: index = %d and %c\n", i, c);
+ 	if (c > 96 && c < 123)
+ 		return (c - 32);
+ 	return (c);
+}
+
+int	main(void)
+{
+ 	char str[13] = "Maiuscolami!";
+ 	printf("Stringa di partenza: %s\n", str);
+ 	char *r = ft_strmapi(str, my_toupper);
+ 	printf("Risultato: %s\n", r);
+ 	free (r);
+ 	return 0;
+}*/
