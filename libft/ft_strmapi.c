@@ -32,7 +32,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /*
 char my_toupper(unsigned int i, char c)
 {
-	printf("My inner function: index = %d and %c\n", i, c);
+	printf("Funzione interna: index %d - %c\n", i, c);
  	if (c > 96 && c < 123)
  		return (c - 32);
  	return (c);
