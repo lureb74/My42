@@ -10,9 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
+
 int	ft_tolower(int c)
 {
 	if (c > 64 && c < 91)
 		return (c + 32);
 	return (c);
 }
+/*
+int	main(void)
+{
+	int	r;
+
+	r = ft_tolower('A');
+	printf("%c\n", r);
+	return (0);
+}*/
