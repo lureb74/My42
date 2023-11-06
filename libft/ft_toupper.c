@@ -10,9 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
+
 int	ft_toupper(int c)
 {
 	if (c > 96 && c < 123)
 		return (c - 32);
 	return (c);
 }
+/*
+int	main(void)
+{
+	int	r;
+
+	r = ft_toupper('a');
+	printf("%c\n", r);
+	return (0);
+}*/
