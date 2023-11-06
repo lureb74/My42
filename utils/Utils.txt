@@ -15,5 +15,11 @@ VALGRIND
 CC xxxxx.c && valgrind ./a.out
 Eseguendo, fa un controllo se ci sono leaks nella memoria 
 
-AGGIORNATI 04-11-2023:
+AGGIORNATI 05-11-2023:
 split YEEEEEAHHHHH!!!
+
+06-11-2023:
+strtrim
+
+FINITO...?
+controllare lstdelone perché non testa
