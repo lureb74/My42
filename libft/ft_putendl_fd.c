@@ -18,3 +18,11 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, s++, 1);
 	write(fd, "\n", 1);
 }
+/*
+int	main(void)
+{
+	char	s[] = "printami!";
+
+	ft_putendl_fd(s, 1);
+	return (0);
+}*/
