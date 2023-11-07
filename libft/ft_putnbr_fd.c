@@ -51,3 +51,10 @@ void	ft_putnbr_fd(int n, int fd)
 	r[count(n)] = '\0';
 	ft_putstr_fd(r, fd);
 }
+/*
+int	main(void)
+{
+	ft_putnbr_fd(-2147483648, 1);
+	write(1, "\n", 1);
+	return (0);
+}*/
