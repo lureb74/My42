@@ -10,19 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
-	i = 0;
+	i = -1;
 	if (s && f)
-	{
-		while (s[i])
-		{
-			(*f)(i, &s[i]);
-			i++;
-		}
-	}
+		while (s[++i])
+			f(i, &s[i]);
 }
+/*
+void my_tolower(unsigned int i, char *s)
+{
+	int	j = -1;
+
+	while (s[++j])
+		if (s[j] > 64 && s[j] < 91)
+			s[j] += 32;
+	printf("Funzione interna: index %d - %s\n", i, s);
+}
+
+int	main(void)
+{
+ 	char str[13] = "MINUSCOLAMI!";
+ 
+ 	printf("Stringa di partenza: %s\n", str);
+ 	ft_striteri(str, my_tolower);
+ 	printf("Risultato: %s\n", str);
+ 	return (0);
+}*/
