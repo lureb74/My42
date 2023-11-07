@@ -17,3 +17,11 @@ void	ft_putstr_fd(char *s, int fd)
 	while (*s)
 		write(fd, s++, 1);
 }
+/*
+int	main(void)
+{
+	char	s[] = "printami!";
+
+	ft_putstr_fd(s, 1);
+	write(1, "\n", 1);
+}*/
