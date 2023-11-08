@@ -28,7 +28,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 }
 /*
 // IL PRESENTE 'MAIN' TESTA, OLTRE A ft_lstadd_front, ANCHE ft_lstadd_back, ft_lstnew ED ft_lstsize
-int main()
+int main(void)
 {
 	t_list	*node0;
 	t_list	*node1;
@@ -63,5 +63,5 @@ int main()
 		node0 = node0->next;
 		r--;
 	}
-	return 0;
+	return (0);
 }*/
