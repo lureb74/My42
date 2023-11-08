@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
@@ -26,21 +26,41 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		}
 	}
 }
-
+/*
 int main()
 {
-	t_list	*lst;
+	t_list	*node0;
 	t_list	*node1;
 	t_list	*node2;
-	char content1[10] = "CONTENT 1";
-	char content2[10] = "CONTENT 2";
+	t_list	*node3;
+	t_list	*node4;
+	t_list	*node5;
+	char	content0[10] = "CONTENT 0";
+	char	content1[10] = "CONTENT 1";
+	char	content2[10] = "CONTENT 2";
+	char	content3[10] = "CONTENT 3";
+	char	content4[10] = "CONTENT 4";
+	char	content5[10] = "CONTENT 5";
+	int		r;
 
-	lst = (t_list *)malloc(sizeof(t_list) * 5);
+	node0 = ft_lstnew(content0);
 	node1 = ft_lstnew(content1);
 	node2 = ft_lstnew(content2);
-	ft_lstadd_front(&lst, node1);
-	ft_lstadd_front(&lst, node2);
-	printf("The result is %s\n", (char *)lst[0].content);
-	printf("The result is %s\n", (char *)lst[0].next->content);
+	node3 = ft_lstnew(content3);
+	node4 = ft_lstnew(content4);
+	node5 = ft_lstnew(content5);
+	ft_lstadd_front(&node0, node1);
+	ft_lstadd_front(&node0, node2);
+	ft_lstadd_front(&node0, node3);
+	ft_lstadd_front(&node0, node4);
+	ft_lstadd_front(&node0, node5);
+	r = ft_lstsize(node0);
+	printf("%d\n", r);
+	while (r > 0)
+	{
+		printf("The result is %s\n", (char *)node0[0].content);
+		node0 = node0->next;
+		r--;
+	}
 	return 0;
-}
+}*/
