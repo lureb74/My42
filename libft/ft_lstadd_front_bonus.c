@@ -27,6 +27,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	}
 }
 /*
+// IL PRESENTE 'MAIN' TESTA, OLTRE A ft_lstadd_front, ANCHE ft_lstadd_back, ft_lstnew ED ft_lstsize
 int main()
 {
 	t_list	*node0;
@@ -50,9 +51,9 @@ int main()
 	node4 = ft_lstnew(content4);
 	node5 = ft_lstnew(content5);
 	ft_lstadd_front(&node0, node1);
-	ft_lstadd_front(&node0, node2);
+	ft_lstadd_back(&node0, node2);
 	ft_lstadd_front(&node0, node3);
-	ft_lstadd_front(&node0, node4);
+	ft_lstadd_back(&node0, node4);
 	ft_lstadd_front(&node0, node5);
 	r = ft_lstsize(node0);
 	printf("%d\n", r);
