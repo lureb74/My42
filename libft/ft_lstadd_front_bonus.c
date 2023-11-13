@@ -27,7 +27,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	}
 }
 /*
-// IL PRESENTE 'MAIN' TESTA, OLTRE A ft_lstadd_front, ANCHE ft_lstadd_back, ft_lstnew ED ft_lstsize
+// IL PRESENTE 'MAIN' TESTA, OLTRE A ft_lstadd_front,
+//ANCHE ft_lstadd_back, ft_lstnew ED ft_lstsize
 int main(void)
 {
 	t_list	*node0;
