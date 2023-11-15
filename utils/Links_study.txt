@@ -25,3 +25,6 @@ https://git.hexanyn.fr/42/piscine
 
 LISTE
 https://www.youtube.com/results?search_query=linked+list+in+c+neso
+
+PRINTF
+https://www.youtube.com/watch?v=Hb2m7htiKWM
