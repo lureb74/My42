@@ -1,0 +1,27 @@
+Compiler online:
+https://cplayground.com/
+
+Numeri primi:
+http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
+
+freecodecamp - Tutorial C
+https://www.youtube.com/watch?v=KJgsSFOSQv0
+
+Harvard - CS50
+https://cs50.harvard.edu/x/2023/
+
+https://www.w3schools.com/c/index.php
+
+Oceano (canale youtube sulla 42 Piscine)
+https://www.youtube.com/watch?v=d2eYADN8Lx8&list=PLc4DnsRQbs6ZTJ-CxxtYlec3KyfIU1tQD
+
+VIM DEFAULT EDITOR:
+https://askubuntu.com/questions/264258/changing-vim-editor-settings
+
+42 PISCINE - SUGGESTIONS:
+https://github.com/48d31kh413k/1337-Piscine-42/tree/main
+https://github.com/pasqualerossi/42-Piscine/tree/main
+https://git.hexanyn.fr/42/piscine
+
+LISTE
+https://www.youtube.com/results?search_query=linked+list+in+c+neso
