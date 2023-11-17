@@ -105,7 +105,7 @@ char	**ft_split(char const *s, char c)
 		r[ln] = charcopy(s, c, ln, cl);
 		if (!r[ln])
 		{
-			while (r[--ln])
+			while (r[--ln] && ln >= 0)
 				free(r[ln]);
 			free(r);
 			return (NULL);
