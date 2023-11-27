@@ -111,6 +111,48 @@ static char	*cat_di_toa(char *s, int n)
 	return (r);
 }
 
+static int	u_count(unsigned int n)
+{
+	int	c;
+
+	c = 0;
+	if (n <= 0)
+		c = 1;
+	while (n)
+	{
+		n /= 10;
+		c++;
+	}
+	return (c);
+}
+
+static char	*cat_u_toa(char *s, unsigned int n)
+{
+	unsigned long	ncopy;
+	size_t			len;
+	char			*r;
+
+	ncopy = n;
+	len = u_count(n);
+	r = ft_calloc(1, (len + 1));
+	if (!r)
+		return (NULL);
+	if (ncopy < 0)
+	{
+		r[0] = '-';
+		ncopy *= -1;
+	}
+	if (ncopy == 0)
+		r[0] = '0';
+	while (ncopy != 0)
+	{
+		r[--len] = ncopy % 10 + 48;
+		ncopy /= 10;
+	}
+	r = cat_strcat(s, r);
+	return (r);
+}
+
 static char *cat_char_percent(char *s, va_list arg, const char c)
 {
 	char 	*r;
@@ -170,8 +212,13 @@ static char	*cat_args(char *s, va_list arg, const char c)
 {
 	char	*r;
 
+	r = (char *)ft_calloc(sizeof(char), 1);
+	if (!r)
+		return (NULL);
 	if (c == 'd' || c == 'i')
 		r = cat_di_toa(s, va_arg(arg, int));
+	else if (c == 'u')
+		r = cat_u_toa(s, va_arg(arg, unsigned int));
 	else if (c == 's')
 		r = cat_strcat(s, salloc(va_arg(arg, char *)));
 	else if (c == 'c' || c == '%')
@@ -209,11 +256,14 @@ int	main(void)
 	int		i = 1234567890;
 	char	s[] = "ciao!";
 	char    c = 'c';
+	unsigned int	u = -1;
 /*	int		ror;*/
 	int		rft;
+	
 
-	rft = ft_printf("Integer %d, character %c, string %s\nand %%%%%%%m", i, c, s);
+	rft = ft_printf("integer %d\ncharacter %c\nstring %s\npercent %%%%%%\nunsigned %u", i, c, s, u);
 	printf("\nTotal lenght: %d\n", rft);
+	printf("%x\n", i);
 /*	printf("String lenght: %lu\n", f = strlen(s));
 	ror = printf("Print this: %d\n...and this: \n", i);
 	printf("Total lenght: %d\n", ror);*/
